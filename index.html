@@ -19,13 +19,17 @@
 <p id="resultado"></p>
 
 <script>
-// Variável com o ano atual (definido por mim)
 let anoAtual = 2025;
 
-// Função que calcula e mostra o resultado
 function mostrarMensagem() {
     let nome = document.getElementById("nome").value;
     let anoNasc = Number(document.getElementById("anoNascimento").value);
+
+    if (!nome || !anoNasc) {
+        document.getElementById("resultado").innerText =
+            "Por favor, preencha tudo.";
+        return;
+    }
 
     let idade = anoAtual - anoNasc;
 
