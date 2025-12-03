@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Calculadora de Idade</title>
+</head>
+<body>
+
+<h2>Calcular Idade</h2>
+
+<label>Digite seu nome:</label><br>
+<input type="text" id="nome"><br><br>
+
+<label>Digite seu ano de nascimento:</label><br>
+<input type="number" id="anoNascimento"><br><br>
+
+<button onclick="mostrarMensagem()">Enviar</button>
+
+<p id="resultado"></p>
+
+<script>
+// Variáveis principais
+let anoAtual = 2025; // definido por mim
+
+function mostrarMensagem() {
+    let nome = document.getElementById("nome").value; // digitado pelo usuário
+    let anoNasc = document.getElementById("anoNascimento").value; // digitado pelo usuário
+    
+    let idade = anoAtual - anoNasc; // cálculo da idade
+
+    document.getElementById("resultado").innerText =
+        "Olá, seu nome é " + nome + " e você tem " + idade + " anos";
+}
+</script>
+
+</body>
+</html>
